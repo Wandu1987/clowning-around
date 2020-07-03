@@ -16,6 +16,7 @@ urlpatterns = [
     path("users/", include("clowning_around.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
+    path("appointments/", include("clowning_around.appointments.urls", namespace="appointments")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
